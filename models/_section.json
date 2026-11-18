@@ -33,6 +33,26 @@
             {
               "name": "Highlight",
               "value": "highlight"
+            },
+            {
+              "name": "Light Beige",
+              "value": "light-beige"
+            },
+            {
+              "name": "Light Grey",
+              "value": "light-grey"
+            },
+            {
+              "name": "Centered",
+              "value": "centered"
+            },
+            {
+              "name": "Disclosure",
+              "value": "disclosure"
+            },
+            {
+              "name": "Separator",
+              "value": "separator"
             }
           ]
         }
