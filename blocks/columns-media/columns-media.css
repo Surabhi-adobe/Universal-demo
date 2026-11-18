@@ -1,0 +1,176 @@
+/* columns-media: copy column beside a photo (source: .comparison-highlight-layout) */
+
+/* the beige band (section inner wrapper) carries a gutter padding; the source
+   content sits directly on the band edge, so the block cancels that gutter */
+.columns-media {
+  margin: 0 calc(-1 * var(--content-gutter));
+}
+
+.columns-media > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.columns-media > div > div {
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+/* image cell paragraph wrapper (EDS may wrap bare pictures) */
+.columns-media .columns-media-img-col p {
+  margin: 0;
+}
+
+/* text column */
+.columns-media .columns-media-text-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 35px 20px;
+}
+
+.columns-media .columns-media-text-col h2 {
+  margin: 0 0 10px;
+}
+
+.columns-media .columns-media-text-col p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.columns-media .columns-media-text-col ul {
+  margin: 15px 0 8px 36px;
+  padding: 0 0 0 10px;
+  list-style: none;
+}
+
+.columns-media .columns-media-text-col li {
+  margin: 0 0 13px;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 26px;
+  text-indent: -17px;
+}
+
+.columns-media .columns-media-text-col li::before {
+  content: '\25CF';
+  padding-right: 5px;
+  color: var(--brand-red);
+  font-size: 0.95em;
+}
+
+/* arrow CTA */
+.columns-media .columns-media-text-col p:has(> a:only-child) {
+  margin: 20px 0 13px;
+}
+
+/* flex column does not collapse margins: source collapses the list's
+   bottom margin into the CTA's 20px top margin */
+.columns-media .columns-media-text-col ul + p:has(> a:only-child) {
+  margin-top: 12px;
+}
+
+main .columns-media .columns-media-text-col a:any-link,
+main .columns-media .columns-media-text-col a.button:any-link {
+  display: inline-block;
+  position: relative;
+  padding: 3px 0 0 22px;
+  color: #000;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-transform: uppercase;
+  text-decoration: underline 1px;
+  text-underline-offset: auto;
+}
+
+main .columns-media .columns-media-text-col a:hover,
+main .columns-media .columns-media-text-col a:focus-visible {
+  color: #000;
+  text-decoration-thickness: 2px;
+}
+
+main .columns-media .columns-media-text-col a:any-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1em;
+  height: 1.5em;
+  background-color: var(--brand-red);
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='8.8' fill='none' stroke='%23000' stroke-width='1.6'/%3E%3Cpath d='M5.5 10h8M10.2 6.4 13.8 10l-3.6 3.6' fill='none' stroke='%23000' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 1em 1em no-repeat;
+}
+
+/* image column */
+.columns-media .columns-media-img-col {
+  display: flex;
+  align-items: center;
+  line-height: 0;
+}
+
+.columns-media .columns-media-img-col picture {
+  display: block;
+  width: 100%;
+  margin: 15px 0;
+}
+
+.columns-media .columns-media-img-col img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (width >= 900px) {
+  .columns-media > div {
+    flex-direction: row;
+    padding: 20px 0;
+  }
+
+  .columns-media > div > div {
+    flex: 0 0 50%;
+  }
+
+  .columns-media .columns-media-text-col p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .columns-media .columns-media-text-col ul {
+    margin-bottom: 10px;
+  }
+
+  .columns-media .columns-media-text-col ul + p:has(> a:only-child) {
+    margin-top: 10px;
+  }
+
+  .columns-media .columns-media-text-col li {
+    font-size: 20px;
+  }
+
+  main .columns-media .columns-media-text-col a:any-link,
+  main .columns-media .columns-media-text-col a.button:any-link {
+    font-size: 20px;
+  }
+}
+
+@media (width >= 1200px) {
+  .columns-media > div {
+    padding: 35px 15px;
+  }
+
+  .columns-media .columns-media-text-col {
+    padding: 40px;
+  }
+
+  .columns-media .columns-media-img-col {
+    padding: 20px;
+  }
+
+  .columns-media .columns-media-img-col picture {
+    margin: 0;
+  }
+}

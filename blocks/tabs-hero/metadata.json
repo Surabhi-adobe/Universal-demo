@@ -1,0 +1,21 @@
+{
+  "variantName": "tabs-hero",
+  "baseBlock": "tabs",
+  "canonicalModel": "collection",
+  "visualCharacteristics": {
+    "purpose": "Tabbed homepage hero; each tab switches the heading, description and CTA shown over a background photo",
+    "description": "Full-width photo with white copy box over it and a full-width row of three tab buttons beneath"
+  },
+  "contentPattern": {
+    "structure": "tab label cell, then a content cell with optional background image, heading, description and CTA link; tab buttons render beneath the panels",
+    "description": "Interactive tablist (role=tabpanel) switching hero copy; tabs is the interactive component, background photo and each panel's heading, text and CTA stay in the panels. Desktop 'wide' and mobile 'narrow' duplicates collapse into one panel each.",
+    "blockContent": "Three-tab hero: tab labels 'Jackson Market Link Pro® Suite', 'Jackson Income Assurance℠ Suite', 'Performance center'; each panel has a heading, description and a 'See how it works'/'Explore income options'/'Access performance tool' CTA over a shared background photo"
+  },
+  "options": [],
+  "memberVariantIds": [
+    "tabs-hero"
+  ],
+  "usage": "Top-of-page hero that presents two to four product lines as switchable tabs.",
+  "reuseGuidance": "Use for an above-the-fold hero with tabbed messaging. For a single message use hero-promo; for in-page tabbed content without a background photo use a plain tabs block.",
+  "sourceUrl": "https://www.jackson.com/"
+}

@@ -1,0 +1,24 @@
+{
+  "variantName": "columns-stats",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Intro copy with CTAs beside a stack of large statistic figures",
+    "description": "Wide copy plus two buttons on the left, narrow stacked large stat figures on the right"
+  },
+  "contentPattern": {
+    "structure": "one row with two cells: copy (heading, paragraph, CTA links) and stats (each stat a bold value paragraph followed by a label paragraph)",
+    "description": "Fixed side-by-side layout of two different content groups (copy vs stats). Stat values are kept as bold paragraphs, not headings.",
+    "blockContent": "Intro copy with two CTAs beside a stack of three statistics"
+  },
+  "options": [],
+  "memberVariantIds": [
+    "columns-stats"
+  ],
+  "usage": "Company-credentials section showing key figures next to an intro and CTAs.",
+  "reuseGuidance": "Use when a copy block sits beside two to four headline numbers. Author each value in bold on its own paragraph, label in the next paragraph.",
+  "sourceUrl": "https://www.jackson.com/",
+  "sectionMetadata": {
+    "style": "light-grey"
+  }
+}

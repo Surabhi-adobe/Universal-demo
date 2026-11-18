@@ -50,7 +50,13 @@
         "hero",
         "cards",
         "columns",
-        "fragment"
+        "fragment",
+        "tabs-hero",
+        "hero-promo",
+        "columns-media",
+        "columns-stats",
+        "cards-icon",
+        "cards-image"
       ]
     }
   ]

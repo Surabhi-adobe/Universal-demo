@@ -1,0 +1,160 @@
+/* columns-stats: intro copy with CTAs beside stacked figures (source: .stat-spotlight) */
+
+/* the grey band (section inner wrapper) carries a gutter padding; the source
+   insets the content from the band edge by its own margin + padding, so the
+   block cancels the gutter and applies the source offsets itself */
+.columns-stats {
+  margin: 0 calc(-1 * var(--content-gutter));
+  padding: 30px 25px;
+}
+
+.columns-stats > div {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* copy column */
+.columns-stats .columns-stats-copy {
+  flex: 1 1 250px;
+  min-width: 0;
+  margin: 0 0 40px;
+}
+
+.columns-stats .columns-stats-copy h2 {
+  margin: 0 0 10px;
+  color: var(--brand-plum-dark);
+  font-size: 32px;
+  line-height: 40px;
+}
+
+.columns-stats .columns-stats-copy p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 20.8px;
+}
+
+.columns-stats sup {
+  font-size: 0.75em;
+}
+
+/* CTAs */
+.columns-stats .columns-stats-actions {
+  margin: 20px 0 0;
+  font-size: 15.2px;
+  line-height: 20.8px;
+}
+
+.columns-stats .columns-stats-actions p.button-wrapper {
+  display: inline;
+  margin: 0;
+}
+
+main .columns-stats a.button.primary:any-link,
+main .columns-stats a.button.secondary:any-link {
+  display: inline-block;
+  width: 100%;
+  margin: 5px 0;
+  padding: 8px 25px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20.8px;
+  text-align: center;
+}
+
+main .columns-stats a.button.secondary:any-link {
+  padding: 10px 25px;
+}
+
+/* figures column */
+.columns-stats .columns-stats-figures {
+  flex: 0 1 auto;
+  padding-bottom: 10px;
+}
+
+.columns-stats .columns-stats-item + .columns-stats-item {
+  margin-top: 10px;
+}
+
+/* short white rule above each following figure */
+.columns-stats .columns-stats-item + .columns-stats-item::before {
+  content: '';
+  display: block;
+  width: 34px;
+  height: 1px;
+  margin: 0 0 20px;
+  background-color: #fff;
+}
+
+.columns-stats .columns-stats-item p {
+  margin: 0;
+}
+
+.columns-stats .columns-stats-item .columns-stats-value {
+  color: var(--brand-plum-dark);
+  font-family: var(--heading-font-family);
+  font-size: 19.2px;
+  line-height: 27.2px;
+}
+
+.columns-stats .columns-stats-value strong {
+  font-weight: 700;
+}
+
+.columns-stats .columns-stats-item .columns-stats-label {
+  margin-right: -10px;
+  color: #000;
+  font-size: 15.2px;
+  line-height: 20.8px;
+}
+
+@media (width >= 600px) {
+  .columns-stats {
+    padding: 30px 75px;
+  }
+
+  .columns-stats .columns-stats-copy {
+    margin: 0 40px 40px 0;
+  }
+
+  .columns-stats .columns-stats-copy h2 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  .columns-stats .columns-stats-copy p {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .columns-stats .columns-stats-actions {
+    font-size: 19px;
+    line-height: 26px;
+  }
+
+  main .columns-stats a.button.primary:any-link,
+  main .columns-stats a.button.secondary:any-link {
+    width: auto;
+    line-height: 26px;
+  }
+
+  /* source separates the inline CTAs with a word space */
+  .columns-stats .columns-stats-actions p.button-wrapper + p.button-wrapper::before {
+    content: ' ';
+  }
+
+  .columns-stats .columns-stats-item .columns-stats-value {
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  .columns-stats .columns-stats-item .columns-stats-label {
+    font-size: 19px;
+    line-height: 26px;
+  }
+}
+
+@media (width >= 900px) {
+  .columns-stats {
+    padding: 30px 125px;
+  }
+}

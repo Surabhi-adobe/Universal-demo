@@ -1,0 +1,173 @@
+{
+  "templates": [
+    {
+      "name": "home",
+      "urls": [
+        "https://www.jackson.com/"
+      ],
+      "representativeUrl": "https://www.jackson.com/",
+      "description": "Jackson homepage: tabbed hero, promo, media columns, icon cards, stats, image cards and disclosures",
+      "blocks": [
+        {
+          "name": "tabs-hero",
+          "instances": [
+            "div.hero-space.v3"
+          ]
+        },
+        {
+          "name": "hero-promo",
+          "instances": [
+            "div.background-container div.contents:has(> div.spotlight)"
+          ]
+        },
+        {
+          "name": "columns-media",
+          "instances": [
+            "div.comparison-highlight-layout"
+          ]
+        },
+        {
+          "name": "cards-icon",
+          "instances": [
+            "div.cta-icon-card-wrapper"
+          ]
+        },
+        {
+          "name": "columns-stats",
+          "instances": [
+            "div.stat-spotlight"
+          ]
+        },
+        {
+          "name": "cards-image",
+          "instances": [
+            "div.promo-card-wrapper"
+          ]
+        }
+      ],
+      "urlPattern": "/",
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "Tabbed hero",
+          "selector": [
+            "section > div.content-wrapper > div.hero-space.v3"
+          ],
+          "style": null,
+          "blocks": [
+            "tabs-hero"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2",
+          "name": "Financial professionals promo",
+          "selector": [
+            "section > div.content-wrapper > div.background-container:has(div.spotlight)",
+            "section > div.content-wrapper > div.background-container:nth-of-type(3)"
+          ],
+          "style": null,
+          "blocks": [
+            "hero-promo"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-3",
+          "name": "Annuity goals",
+          "selector": [
+            "section > div.content-wrapper > div.background-container:has(div.comparison-highlight-layout)",
+            "section > div.content-wrapper > div.background-container:nth-of-type(4)"
+          ],
+          "style": "light-beige",
+          "blocks": [
+            "columns-media"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-4",
+          "name": "Annuity disclosure",
+          "selector": [
+            "section > div.content-wrapper > div.disclosure:nth-of-type(5)"
+          ],
+          "style": "disclosure",
+          "blocks": [],
+          "defaultContent": [
+            "section > div.content-wrapper > div.disclosure:nth-of-type(5) div.content-area > *"
+          ]
+        },
+        {
+          "id": "section-5",
+          "name": "Retirement planning resources",
+          "selector": [
+            "section > div.content-wrapper > div.layout-container:has(div.cta-icon-card-wrapper)",
+            "section > div.content-wrapper > div.layout-container:nth-of-type(6)"
+          ],
+          "style": "centered",
+          "blocks": [
+            "cards-icon"
+          ],
+          "defaultContent": [
+            "section > div.content-wrapper > div.layout-container:has(div.cta-icon-card-wrapper) div.content-area > h3"
+          ]
+        },
+        {
+          "id": "section-6",
+          "name": "The Jackson difference",
+          "selector": [
+            "section > div.content-wrapper > div.background-container:has(div.stat-spotlight)",
+            "section > div.content-wrapper > div.background-container:nth-of-type(7)"
+          ],
+          "style": "light-grey",
+          "blocks": [
+            "columns-stats"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-7",
+          "name": "Additional resources",
+          "selector": [
+            "section > div.content-wrapper > div.layout-container:has(div.promo-card-wrapper)",
+            "section > div.content-wrapper > div.layout-container:nth-of-type(8)"
+          ],
+          "style": "centered",
+          "blocks": [
+            "cards-image"
+          ],
+          "defaultContent": [
+            "section > div.content-wrapper > div.layout-container:has(div.promo-card-wrapper) div.content-area > h3"
+          ]
+        },
+        {
+          "id": "section-8",
+          "name": "Footnotes",
+          "selector": [
+            "section > div.content-wrapper > div.disclosure:nth-of-type(9)"
+          ],
+          "style": "disclosure",
+          "blocks": [],
+          "defaultContent": [
+            "section > div.content-wrapper > div.disclosure:nth-of-type(9) div.content-area > *"
+          ]
+        },
+        {
+          "id": "section-9",
+          "name": "Investor disclosures",
+          "selector": [
+            "section > div.content-wrapper > div.disclosure:nth-of-type(10)"
+          ],
+          "style": "disclosure, separator",
+          "blocks": [],
+          "defaultContent": [
+            "section > div.content-wrapper > div.disclosure:nth-of-type(10) div.content-area > *"
+          ]
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "projectType": "xwalk"
+  }
+}

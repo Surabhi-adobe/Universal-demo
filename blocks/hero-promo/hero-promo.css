@@ -1,0 +1,129 @@
+/* hero-promo: values from https://www.jackson.com/ .background-container .contents > .spotlight */
+
+.hero-promo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 536px;
+  overflow: hidden;
+}
+
+/* background image (source: background cover, right center up to 768px, center above) */
+.hero-promo .hero-promo-media {
+  position: absolute;
+  inset: 0;
+  line-height: 0;
+}
+
+.hero-promo .hero-promo-media > div,
+.hero-promo .hero-promo-media p,
+.hero-promo .hero-promo-media picture {
+  height: 100%;
+  margin: 0;
+}
+
+.hero-promo .hero-promo-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+}
+
+/* copy: white box, left aligned */
+.hero-promo .hero-promo-content {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.hero-promo .hero-promo-content > div {
+  box-sizing: border-box;
+  flex: 1 1 auto;
+  margin: 20px;
+  padding: 30px;
+  background-color: #fff;
+  color: #000;
+  text-align: left;
+}
+
+.hero-promo .hero-promo-content h2 {
+  margin: 0 0 29px;
+}
+
+.hero-promo .hero-promo-content p {
+  margin: 0;
+  color: #000;
+  font-size: 20px;
+  line-height: 20.8px;
+}
+
+/* CTA: Jackson primary button (plain authored link) */
+.hero-promo .hero-promo-content p.hero-promo-cta {
+  display: flex;
+
+  /* source: 15px margin of a trailing empty paragraph + 30px header padding */
+  margin-top: 45px;
+}
+
+main .hero-promo .hero-promo-cta a:any-link {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 100%;
+  margin: 5px 0;
+  padding: 8px 25px;
+  border: 2px solid transparent;
+  border-radius: 0;
+  background-color: var(--brand-red);
+  color: #fff;
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20.8px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color 0.5s, border-color 0.5s, color 0.5s;
+}
+
+main .hero-promo .hero-promo-cta a:hover,
+main .hero-promo .hero-promo-cta a:focus-visible {
+  border-color: var(--brand-grey-text);
+  background-color: var(--brand-plum);
+  color: #fff;
+  text-decoration: underline;
+}
+
+@media (width >= 461px) {
+  .hero-promo .hero-promo-content > div {
+    margin: 20px 65px;
+  }
+}
+
+@media (width >= 501px) {
+  main .hero-promo .hero-promo-cta a:any-link {
+    width: auto;
+  }
+}
+
+@media (width >= 769px) {
+  .hero-promo .hero-promo-media img {
+    object-position: center;
+  }
+}
+
+@media (width >= 900px) {
+  .hero-promo .hero-promo-content p {
+    line-height: 26px;
+  }
+
+  main .hero-promo .hero-promo-cta a:any-link {
+    line-height: 26px;
+  }
+}
+
+@media (width >= 1025px) {
+  .hero-promo .hero-promo-content > div {
+    flex: 0 0 41%;
+  }
+}

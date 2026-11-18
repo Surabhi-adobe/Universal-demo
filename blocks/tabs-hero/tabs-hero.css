@@ -1,0 +1,270 @@
+/* tabs-hero: values from https://www.jackson.com/ div.hero-space.v3 computed styles */
+
+/* the hero spans the full viewport width */
+main > .section > .tabs-hero-wrapper {
+  max-width: none;
+  padding: 0;
+}
+
+.tabs-hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: #000;
+  font-family: var(--body-font-family);
+}
+
+/* panels */
+.tabs-hero .tabs-hero-panel {
+  position: relative;
+}
+
+.tabs-hero .tabs-hero-panel[aria-hidden='true'] {
+  display: none;
+}
+
+/* background photo: a cropped strip, the image is scaled past the block width */
+.tabs-hero .tabs-hero-media {
+  position: relative;
+  overflow: hidden;
+  height: 0;
+  padding-bottom: 50%;
+  line-height: 0;
+}
+
+.tabs-hero .tabs-hero-media p {
+  margin: 0;
+}
+
+.tabs-hero .tabs-hero-media img {
+  position: absolute;
+  top: 0;
+  left: 15%;
+  width: 222%;
+  max-width: none;
+  height: auto;
+  min-height: 100%;
+  object-fit: cover;
+  transform: translateX(-50%);
+}
+
+/* copy box */
+.tabs-hero .tabs-hero-content {
+  position: relative;
+  margin: 20px 0 0;
+  padding: 0 20px;
+}
+
+.tabs-hero .tabs-hero-copy {
+  box-sizing: border-box;
+  margin: 0 15px 10px;
+  padding: 20px 0;
+  background-color: #fff;
+}
+
+.tabs-hero .tabs-hero-content h1,
+.tabs-hero .tabs-hero-content h2 {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 10px;
+  color: var(--brand-red);
+  font-family: var(--heading-font-family);
+  font-size: 28.8px;
+  font-weight: 700;
+  line-height: 36.8px;
+}
+
+.tabs-hero .tabs-hero-content h1::after,
+.tabs-hero .tabs-hero-content h2::after {
+  content: '';
+  display: block;
+  padding-bottom: 10px;
+  border-bottom: 4px solid var(--brand-red);
+}
+
+.tabs-hero .tabs-hero-content p {
+  margin: 0;
+  color: #000;
+  font-size: 15.2px;
+  line-height: 20.8px;
+}
+
+/* CTA: "arrow" link */
+.tabs-hero .tabs-hero-content a:any-link {
+  position: relative;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 3px 0 0 22px;
+  color: #000;
+  font-weight: 600;
+  text-decoration: underline 1px;
+  text-transform: uppercase;
+}
+
+.tabs-hero .tabs-hero-content a:hover,
+.tabs-hero .tabs-hero-content a:focus-visible {
+  color: #000;
+  text-decoration-thickness: 2px;
+}
+
+.tabs-hero .tabs-hero-content a:any-link::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 0;
+  width: 17px;
+  height: 17px;
+  background-color: var(--brand-red);
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath d='M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm0 48C145.5 56 56 145.5 56 256s89.5 200 200 200 200-89.5 200-200S366.5 56 256 56zm12.5 92.5 99 99c4.7 4.7 4.7 12.3 0 17l-99 99c-4.7 4.7-12.3 4.7-17 0l-11.3-11.3c-4.8-4.8-4.7-12.5.2-17.2l58.7-56H140c-6.6 0-12-5.4-12-12v-16c0-6.6 5.4-12 12-12h159.1l-58.7-56c-4.9-4.7-5-12.4-.2-17.2l11.3-11.3c4.7-4.7 12.3-4.7 17 0z'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+/* tab buttons */
+.tabs-hero .tabs-hero-list {
+  display: flex;
+  column-gap: 4px;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: #fff;
+  box-shadow: 0 0 0 100vmax var(--brand-red);
+  clip-path: inset(0 -100vmax);
+}
+
+.tabs-hero .tabs-hero-list button {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex: 1 1 0;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  margin: 0;
+  border: 1px solid transparent;
+  border-radius: 0;
+  padding: 20px;
+  background-color: var(--brand-red);
+  color: #fff;
+  font-family: var(--body-font-family);
+  font-size: 15.2px;
+  font-weight: 600;
+  line-height: 20.8px;
+  text-align: center;
+  white-space: normal;
+  cursor: pointer;
+}
+
+.tabs-hero .tabs-hero-list button p {
+  margin: 0;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.tabs-hero .tabs-hero-list button:hover {
+  border-color: #fff;
+}
+
+.tabs-hero .tabs-hero-list button:focus-visible {
+  outline: 2px solid var(--brand-plum);
+  outline-offset: -4px;
+}
+
+.tabs-hero .tabs-hero-list button[aria-selected='true'],
+.tabs-hero .tabs-hero-list button[aria-selected='true']:hover {
+  border-color: var(--brand-red) transparent;
+  border-width: 3px 1px;
+  background-color: #fff;
+  color: var(--brand-grey-text);
+  cursor: default;
+}
+
+/* tablet: copy box overlays the photo */
+@media (width >= 600px) {
+  .tabs-hero .tabs-hero-media {
+    padding-bottom: 49.6%;
+  }
+
+  .tabs-hero .tabs-hero-media img {
+    left: 50%;
+    width: 113%;
+  }
+
+  /* overlay spans the photo and the 50px tab row, as on the source */
+  .tabs-hero .tabs-hero-content {
+    position: absolute;
+    inset: 0 0 -50px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0 max(20px, calc((100% - 1440px) / 2));
+  }
+
+  .tabs-hero .tabs-hero-copy {
+    max-width: 650px;
+    margin: 0 15px 50px;
+    border: 1px solid var(--brand-light-grey);
+    padding: 30px;
+  }
+
+  .tabs-hero .tabs-hero-content h1,
+  .tabs-hero .tabs-hero-content h2 {
+    font-size: 36px;
+    line-height: 46px;
+  }
+
+  .tabs-hero .tabs-hero-content p {
+    font-size: 19px;
+    line-height: 26px;
+  }
+
+  .tabs-hero .tabs-hero-list button {
+    padding: 10px 5px;
+    font-size: 19px;
+    line-height: 26px;
+  }
+
+  .tabs-hero .tabs-hero-list button[aria-selected='true'],
+  .tabs-hero .tabs-hero-list button[aria-selected='true']:hover {
+    border-top-color: transparent;
+    border-width: 1px 1px 3px;
+  }
+}
+
+/* desktop */
+@media (width >= 900px) {
+  .tabs-hero .tabs-hero-media {
+    height: 380px;
+    padding-bottom: 0;
+  }
+
+  .tabs-hero .tabs-hero-media img {
+    left: 55%;
+  }
+
+  .tabs-hero .tabs-hero-content {
+    justify-content: flex-start;
+  }
+
+  .tabs-hero .tabs-hero-copy {
+    max-width: 800px;
+    margin: 0;
+  }
+
+  .tabs-hero .tabs-hero-content h1,
+  .tabs-hero .tabs-hero-content h2 {
+    font-size: 46px;
+    line-height: 56px;
+  }
+
+  .tabs-hero .tabs-hero-content .tabs-hero-copy > p {
+    max-width: 700px;
+  }
+}
+
+@media (width >= 1200px) {
+  .tabs-hero .tabs-hero-media {
+    height: 0;
+    padding-bottom: 26.39%;
+  }
+}

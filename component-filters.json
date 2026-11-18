@@ -15,13 +15,43 @@
       "hero",
       "cards",
       "columns",
-      "fragment"
+      "fragment",
+      "tabs-hero",
+      "hero-promo",
+      "columns-media",
+      "columns-stats",
+      "cards-icon",
+      "cards-image"
+    ]
+  },
+  {
+    "id": "cards-icon",
+    "components": [
+      "cards-icon-item"
+    ]
+  },
+  {
+    "id": "cards-image",
+    "components": [
+      "cards-image-item"
     ]
   },
   {
     "id": "cards",
     "components": [
       "card"
+    ]
+  },
+  {
+    "id": "columns-media",
+    "components": [
+      "column"
+    ]
+  },
+  {
+    "id": "columns-stats",
+    "components": [
+      "column"
     ]
   },
   {
@@ -37,6 +67,12 @@
       "image",
       "button",
       "title"
+    ]
+  },
+  {
+    "id": "tabs-hero",
+    "components": [
+      "tabs-hero-item"
     ]
   }
 ]

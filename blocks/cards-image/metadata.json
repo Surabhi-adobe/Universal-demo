@@ -1,0 +1,24 @@
+{
+  "variantName": "cards-image",
+  "baseBlock": "cards",
+  "canonicalModel": "collection",
+  "visualCharacteristics": {
+    "purpose": "Cards with a top photo and a text panel holding a centered title, text and button",
+    "description": "Three cards with top photo and dark plum text panel with centered white text and red button"
+  },
+  "contentPattern": {
+    "structure": "image cell, then a text cell with title, description and CTA button",
+    "description": "Repeating look-alike items with image, title, text and CTA; Cards.",
+    "blockContent": "Three image cards: In the news, Corporate responsibility, Our careers (image, title, text, button)"
+  },
+  "options": [],
+  "memberVariantIds": [
+    "cards-image"
+  ],
+  "usage": "Additional-resources or editorial teaser grids.",
+  "reuseGuidance": "Use for photo teaser cards. For icon items use cards-icon.",
+  "sourceUrl": "https://www.jackson.com/",
+  "sectionMetadata": {
+    "style": "centered"
+  }
+}

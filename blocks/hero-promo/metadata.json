@@ -1,0 +1,21 @@
+{
+  "variantName": "hero-promo",
+  "baseBlock": "hero",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Promotional band with heading, text and CTA over a full-band background image",
+    "description": "Inset patterned background image with left-aligned heading, text and button; no overlay box"
+  },
+  "contentPattern": {
+    "structure": "row 1: background image; row 2: heading, paragraph and CTA link",
+    "description": "Text overlaid on a full-band background image is a hero; the photo background belongs to the block so the section is not colored.",
+    "blockContent": "Background hexagon image with heading, paragraph and 'Get started' CTA"
+  },
+  "options": [],
+  "memberVariantIds": [
+    "hero-promo"
+  ],
+  "usage": "Mid-page promotional band directing a specific audience (e.g. financial professionals) to a destination.",
+  "reuseGuidance": "Use for any text-over-background-image promo band. Not for the tabbed top hero (tabs-hero).",
+  "sourceUrl": "https://www.jackson.com/"
+}

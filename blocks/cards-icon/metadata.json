@@ -1,0 +1,24 @@
+{
+  "variantName": "cards-icon",
+  "baseBlock": "cards",
+  "canonicalModel": "collection",
+  "visualCharacteristics": {
+    "purpose": "Row of centered icon items with title, text and link, separated by vertical dividers",
+    "description": "Three centered icon cards with vertical dividers, no card background"
+  },
+  "contentPattern": {
+    "structure": "icon image cell, then a text cell with title, description and link",
+    "description": "Repeating look-alike items (icon, title, text, link to detail page) that flow and wrap; Cards.",
+    "blockContent": "Three icon items: How to plan for retirement, Calculators and tools, Retirement articles (icon, title, text, link)"
+  },
+  "options": [],
+  "memberVariantIds": [
+    "cards-icon"
+  ],
+  "usage": "Resource or feature lists with a small pictogram per item.",
+  "reuseGuidance": "Use for icon-led link lists. For photo cards with a colored text panel use cards-image.",
+  "sourceUrl": "https://www.jackson.com/",
+  "sectionMetadata": {
+    "style": "centered"
+  }
+}

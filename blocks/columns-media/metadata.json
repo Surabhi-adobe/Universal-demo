@@ -1,0 +1,24 @@
+{
+  "variantName": "columns-media",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Copy column (heading, paragraph, bullet list, link) beside a photo",
+    "description": "Copy with bullet list on the left, rounded photo on the right"
+  },
+  "contentPattern": {
+    "structure": "one row with two cells: copy (heading, paragraph, list, link) and image",
+    "description": "Fixed two-column side-by-side layout of different content (copy vs image) that never wraps into a grid; Columns.",
+    "blockContent": "Text column (heading, paragraph, 3-item list, link) beside a photo"
+  },
+  "options": [],
+  "memberVariantIds": [
+    "columns-media"
+  ],
+  "usage": "Explainer section pairing marketing copy and a bullet list with a supporting photo.",
+  "reuseGuidance": "Use for any two-column text plus image split. Swap cell order to put the image on the left. For statistic figures use columns-stats.",
+  "sourceUrl": "https://www.jackson.com/",
+  "sectionMetadata": {
+    "style": "light-beige"
+  }
+}

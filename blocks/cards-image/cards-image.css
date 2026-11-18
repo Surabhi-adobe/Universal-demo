@@ -1,0 +1,149 @@
+/* cards-image: values from https://www.jackson.com/ promo cards (div.promo-card-wrapper) */
+
+/* card row: wrapping flex, centered (a short last row stays centered) */
+.cards-image > ul {
+  list-style: none;
+  margin: 15px 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cards-image > ul > li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 20px 0;
+  padding: 0;
+}
+
+.cards-image .cards-image-card-image {
+  width: 100%;
+  line-height: 0;
+}
+
+.cards-image .cards-image-card-image p {
+  margin: 0;
+}
+
+.cards-image .cards-image-card-image img {
+  width: 100%;
+  height: auto;
+}
+
+/* dark plum text panel; bottom padding leaves room for the pinned CTA */
+.cards-image .cards-image-card-body {
+  position: relative;
+  box-sizing: border-box;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 30px 30px 100px;
+  background-color: var(--brand-plum-dark);
+  text-align: center;
+}
+
+.cards-image .cards-image-card-body > * {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding: 5px;
+}
+
+.cards-image .cards-image-card-body h1,
+.cards-image .cards-image-card-body h2,
+.cards-image .cards-image-card-body h3,
+.cards-image .cards-image-card-body h4,
+.cards-image .cards-image-card-body h5,
+.cards-image .cards-image-card-body h6 {
+  color: #dbcfc7;
+  font-family: var(--heading-font-family);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 36px;
+}
+
+.cards-image .cards-image-card-body p {
+  color: #fff;
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20.8px;
+}
+
+/* CTA: pinned 20px above the panel bottom */
+.cards-image .cards-image-card-body .cards-image-card-cta {
+  position: absolute;
+  left: 0;
+  bottom: 20px;
+  width: 100%;
+  padding: 0 20px;
+  text-align: center;
+}
+
+main .cards-image .cards-image-card-cta a:any-link {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 100%;
+  max-width: 100%;
+  margin: 5px 0;
+  border: 2px solid transparent;
+  border-radius: 0;
+  padding: 8px 25px;
+  background-color: var(--brand-red);
+  color: #fff;
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20.8px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: normal;
+}
+
+main .cards-image .cards-image-card-cta a:hover,
+main .cards-image .cards-image-card-cta a:focus-visible {
+  border-color: var(--brand-grey-text);
+  background-color: var(--brand-plum);
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* source: line-height grows above 470px, full-width CTA up to 500px */
+@media (width > 470px) {
+  .cards-image .cards-image-card-body p,
+  main .cards-image .cards-image-card-cta a:any-link {
+    line-height: 26px;
+  }
+}
+
+@media (width > 500px) {
+  main .cards-image .cards-image-card-cta a:any-link {
+    width: auto;
+  }
+}
+
+@media (width >= 600px) {
+  .cards-image > ul > li {
+    width: calc(100% - 40px);
+    margin: 20px;
+  }
+}
+
+@media (width > 900px) {
+  .cards-image > ul > li {
+    width: calc(50% - 45px);
+  }
+}
+
+@media (width > 1128px) {
+  .cards-image > ul > li {
+    width: calc(33% - 45px);
+  }
+}
